@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Então combinado ❤️</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           FUNDO ROSA ACETINADO
+        ========================= */
+
+        #conteudo {
+
+            width: 100%;
+            min-height: 100vh;
+            min-height: 100dvh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            position: relative;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 10%,
+                    rgba(255, 255, 255, 0.45),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f8b6cf,
+                    #e889ad 50%,
+                    #c95f8b
+                );
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           BRILHO DO FUNDO
+        ========================= */
+
+        #conteudo::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 40%;
+
+            top: 0;
+            left: 0;
+
+            background:
+
+                linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.22),
+                    transparent
+                );
+
+            pointer-events: none;
+        }
+
+
+        /* =========================
+           BRILHOS FLUTUANTES
+        ========================= */
+
+        .brilho {
+
+            position: absolute;
+
+            width: 8px;
+            height: 8px;
+
+            background:
+                rgba(255, 255, 255, 0.7);
+
+            border-radius: 50%;
+
+            animation:
+                flutuar 4s infinite ease-in-out;
+        }
+
+
+        .b1 {
+            top: 15%;
+            left: 10%;
+        }
+
+
+        .b2 {
+            top: 30%;
+            right: 12%;
+
+            animation-delay: 1s;
+        }
+
+
+        .b3 {
+            bottom: 20%;
+            left: 15%;
+
+            animation-delay: 2s;
+        }
+
+
+        .b4 {
+            bottom: 15%;
+            right: 10%;
+
+            animation-delay: 3s;
+        }
+
+
+        @keyframes flutuar {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+                opacity:
+                    0.5;
+            }
+
+
+            50% {
+
+                transform:
+                    translateY(-15px);
+
+                opacity:
+                    1;
+            }
+
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+
+            width:
+                100%;
+
+            max-width:
+                440px;
+
+            padding:
+                clamp(20px, 5vw, 35px);
+
+            border-radius:
+                clamp(22px, 4vw, 32px);
+
+            text-align:
+                center;
+
+            background:
+                rgba(255, 255, 255, 0.16);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.4);
+
+            box-shadow:
+
+                0 20px 60px
+                rgba(100, 20, 50, 0.22),
+
+                inset 0 1px 1px
+                rgba(255, 255, 255, 0.4);
+
+            backdrop-filter:
+                blur(12px);
+
+            -webkit-backdrop-filter:
+                blur(12px);
+
+            position:
+                relative;
+
+            z-index:
+                2;
+        }
+
+
+        /* =========================
+           GIF
+        ========================= */
+
+        .gif-container {
+
+            width:
+                min(250px, 70vw);
+
+            margin:
+                0 auto;
+
+            border-radius:
+                20px;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                0 10px 30px
+                rgba(100, 20, 50, 0.2);
+        }
+
+
+        /* =========================
+           TÍTULO
+        ========================= */
+
+        h1 {
+
+            color:
+                white;
+
+            font-size:
+                clamp(25px, 6vw, 34px);
+
+            line-height:
+                1.2;
+
+            margin:
+                22px 0 10px;
+
+            text-shadow:
+                0 2px 10px
+                rgba(100, 20, 50, 0.25);
+        }
+
+
+        /* =========================
+           SUBTÍTULO
+        ========================= */
+
+        .subtitulo {
+
+            color:
+                rgba(255, 255, 255, 0.92);
+
+            font-size:
+                clamp(15px, 4vw, 18px);
+
+            line-height:
+                1.6;
+
+            margin-top:
+                10px;
+        }
+
+
+        /* =========================
+           INFORMAÇÕES
+        ========================= */
+
+        .informacoes {
+
+            margin-top:
+                25px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                12px;
+        }
+
+
+        .info {
+
+            background:
+                rgba(255, 255, 255, 0.20);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.25);
+
+            border-radius:
+                18px;
+
+            padding:
+                15px;
+
+            color:
+                white;
+
+            box-shadow:
+                0 5px 15px
+                rgba(100, 20, 50, 0.1);
+        }
+
+
+        .info-titulo {
+
+            font-size:
+                13px;
+
+            opacity:
+                0.8;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .info-valor {
+
+            font-size:
+                21px;
+
+            font-weight:
+                bold;
+        }
+
+
+        .surpresa {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                10px;
+        }
+
+
+        .icone {
+
+            font-size:
+                27px;
+        }
+
+
+        /* =========================
+           BOTÃO COMBINADO
+        ========================= */
+
+        .botao-combinado {
+
+            margin-top:
+                25px;
+
+            width:
+                100%;
+
+            max-width:
+                270px;
+
+            height:
+                52px;
+
+            border:
+                none;
+
+            border-radius:
+                15px;
+
+            background:
+                white;
+
+            color:
+                #d65d8b;
+
+            font-size:
+                17px;
+
+            font-weight:
+                bold;
+
+            cursor:
+                pointer;
+
+            box-shadow:
+                0 10px 25px
+                rgba(100, 20, 50, 0.2);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .botao-combinado:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 14px 30px
+                rgba(100, 20, 50, 0.25);
+        }
+
+
+        .botao-combinado:active {
+
+            transform:
+                scale(0.97);
+        }
+
+
+        /* =========================
+           CONFIRMAÇÃO
+        ========================= */
+
+        #confirmacao {
+
+            display:
+                none;
+
+            margin-top:
+                20px;
+
+            animation:
+                aparecer 0.5s ease;
+        }
+
+
+        .mensagem-confirmacao {
+
+            color:
+                white;
+
+            font-size:
+                18px;
+
+            line-height:
+                1.7;
+        }
+
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(10px);
+            }
+
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           CORAÇÃO
+        ========================= */
+
+        .coracao {
+
+            font-size:
+                48px;
+
+            margin-top:
+                15px;
+
+            animation:
+                pulsar 1.5s infinite;
+        }
+
+
+        @keyframes pulsar {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1);
+            }
+
+
+            50% {
+
+                transform:
+                    scale(1.15);
+            }
+
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        .detalhe {
+
+            color:
+                rgba(255, 255, 255, 0.7);
+
+            font-size:
+                12px;
+
+            margin-top:
+                15px;
+        }
+
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            #conteudo {
+
+                padding:
+                    15px;
+            }
+
+
+            .card {
+
+                padding:
+                    20px 15px 25px;
+            }
+
+
+            .gif-container {
+
+                width:
+                    min(220px, 65vw);
+            }
+
+
+            .info-valor {
+
+                font-size:
+                    19px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         FUNDO
+    ========================= -->
+
+    <div id="conteudo">
+
+
+        <div class="brilho b1"></div>
+
+        <div class="brilho b2"></div>
+
+        <div class="brilho b3"></div>
+
+        <div class="brilho b4"></div>
+
+
+        <!-- =========================
+             CARD PRINCIPAL
+        ========================= -->
+
+        <div class="card">
+
+
+            <!-- =========================
+                 GIF
+            ========================= -->
+
+            <div class="gif-container">
+
+                <div
+                    class="tenor-gif-embed"
+                    data-postid="14762310134329663850"
+                    data-share-method="host"
+                    data-aspect-ratio="1"
+                    data-width="100%">
+
+                    <a
+                        href="https://tenor.com/view/dnce-gif-14762310134329663850">
+
+                        Dnce GIF
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 TÍTULO
+            ========================= -->
+
+            <h1>
+
+                Então fechou! 😌
+
+            </h1>
+
+
+            <p class="subtitulo">
+
+                Passo para te buscar.
+
+                <br>
+
+                O resto deixa comigo ✨
+
+            </p>
+
+
+            <!-- =========================
+                 INFORMAÇÕES
+            ========================= -->
+
+            <div class="informacoes">
+
+
+                <!-- HORÁRIO -->
+
+                <div class="info">
+
+                    <div class="info-titulo">
+
+                        🕐 HORÁRIO
+
+                    </div>
+
+                    <div class="info-valor">
+
+                        20:30
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINO -->
+
+                <div class="info">
+
+                    <div class="surpresa">
+
+                        <span class="icone">
+
+                            📍
+
+                        </span>
+
+
+                        <div>
+
+                            <div class="info-titulo">
+
+                                DESTINO
+
+                            </div>
+
+                            <div class="info-valor">
+
+                                Lugar surpresa 👀
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =========================
+                 MENSAGEM
+            ========================= -->
+
+            <p class="subtitulo">
+
+                Só confia em mim e vem 😌
+
+                <br>
+
+                Prometo que vai valer a pena ❤️
+
+            </p>
+
+
+            <!-- =========================
+                 BOTÃO
+            ========================= -->
+
+            <button
+                id="botaoCombinado"
+                class="botao-combinado"
+                onclick="combinado()">
+
+                COMBINADO ❤️
+
+            </button>
+
+
+            <!-- =========================
+                 CONFIRMAÇÃO
+            ========================= -->
+
+            <div id="confirmacao">
+
+
+                <div class="mensagem-confirmacao">
+
+                    Perfeito! ❤️
+
+                    <br><br>
+
+                    Então está combinado. 😌
+
+                    <br>
+
+                    Te busco às
+                    <strong>20:30</strong>.
+
+                    <br>
+
+                    O destino continua sendo
+                    surpresa 👀
+
+                </div>
+
+
+                <div class="coracao">
+
+                    ❤️
+
+                </div>
+
+
+            </div>
+
+
+            <div class="detalhe">
+
+                Até mais tarde... ✨
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* =========================
+           GOOGLE APPS SCRIPT
+        ========================= */
+
+        const URL_PLANILHA =
+            "https://script.google.com/macros/s/AKfycbwEGW7aC1iyoc-2Rga7Xu7Ypv_qjfjeeTs0IRVATwEJj1ZzSu7r1BAInE8BzSELiWG1/exec";
+
+
+        /* =========================
+           BOTÃO COMBINADO
+        ========================= */
+
+        function combinado() {
+
+
+            const botao =
+                document.getElementById(
+                    "botaoCombinado"
+                );
+
+
+            /*
+             * Evita múltiplos cliques
+             */
+
+            botao.disabled =
+                true;
+
+
+            /*
+             * Registra o clique
+             * na Google Planilha
+             */
+
+            fetch(
+                URL_PLANILHA,
+                {
+
+                    method:
+                        "POST",
+
+                    mode:
+                        "no-cors",
+
+                    headers:
+                        {
+                            "Content-Type":
+                                "text/plain;charset=utf-8"
+                        },
+
+                    body:
+                        JSON.stringify({
+
+                            acao:
+                                "COMBINADO"
+
+                        })
+
+                }
+            )
+            .catch(
+                function (error) {
+
+                    console.log(
+                        "Erro ao registrar confirmação:",
+                        error
+                    );
+
+                }
+            );
+
+
+            /*
+             * Esconde o botão
+             */
+
+            botao.style.display =
+                "none";
+
+
+            /*
+             * Mostra a confirmação
+             */
+
+            document
+                .getElementById(
+                    "confirmacao"
+                )
+                .style.display =
+                "block";
+
+        }
+
+    </script>
+
+
+    <!-- =========================
+         TENOR
+    ========================= -->
+
+    <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js">
+    </script>
+
+
+</body>
+
+</html>
